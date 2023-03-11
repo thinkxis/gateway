@@ -1,5 +1,5 @@
-// building payments gateway from scratch using npci stack 
-/* Author: Dipesh Bhoir
+building payments gateway from scratch using npci stack 
+# Author: Dipesh Bhoir
 In our case, we’re going to build a simple API Gateway for the entry of our microservice. So, the API Gateway will implement all of these functions below:
 - Basic Authentication
 - Monitoring
@@ -10,8 +10,9 @@ here is a thing...
 i'm chosing stack based on belief that you own your servers insted of lean model. Though in todays world that is not the case with most companies.
 I'd prefer complete GCP based stack in that case replacing MongoDB with Firestore & Express with Cloud Functions.
 Otherwise its preety basic concept of in four stages.
-*/
 
+
+```
 "dependencies": {
     "axios": "^0.19.1", // Adapter for forwarding the request
     "bcrypt": "^3.0.7", // Used for hashing the basic auth for consumer
@@ -25,11 +26,12 @@ Otherwise its preety basic concept of in four stages.
     "redis": "^2.8.0", // Save it for later as the cache db
     "yaml": "^1.7.2" // For our configuration gateway
 }
+```
 
 // npm install express axios body-parser bluebird cors jsonwebtoken morgan redis yaml bcrypt --save
 
 
-
+```
 function __grabRequest(req) {
     // We need the consume IP Address for collecting a log for our Gateway
     const ipAddress = (req.headers['x-forwarded-for'] || '').split(',').pop() || 
@@ -51,9 +53,9 @@ function __grabRequest(req) {
         body: req.body, 
     }
 }
+```
 
-
-
+```
 // services:
 //     firstService:
 //         port: 3422
@@ -87,8 +89,10 @@ function __grabRequest(req) {
 //             post: 
 //                 - /user/create
 //         secret_key: mainServiceIsRestrictedOnly
+```
 
 
+```
 __getServiceInformation(request.app_id || '')
 .then(service => {
     let flag = false
@@ -130,18 +134,18 @@ __getServiceInformation(request.app_id || '')
 .catch(err => {
     callback(null, null, err)
 })
+```
 
-
-
+```
 function __generateGatewaySignature(serviceSecretKey, callback) {
     jwt.sign({
         gateway: 'ORION_GATEWAY',
         gateway_secret: SECRET_KEY,
     }, serviceSecretKey, { expiresIn: 1800000 }, callback)
 }
+```
 
-
-
+```
 axios({
     method: method,
     baseURL: service.base_url + ':' + service.port,
@@ -156,8 +160,9 @@ axios({
 })
 .then(response => { resolve(response) })
 .catch(err => { reject(err) })
+```
 
-
+```
 function __addSecureAndCacheHeaders(res) {
     // OWASP Secure Headers
     res.set('X-Content-Type-Options', 'nosniff')
@@ -170,6 +175,7 @@ function __addSecureAndCacheHeaders(res) {
     res.set('Pragma', 'no-cache')
     res.set('Expires', '0')
 }
+```
 
 /*
 we are done here with building a basic payment gateway.
@@ -184,10 +190,10 @@ Even then thats not marketable in countries like India specially where you have 
 
 /* some usedful goverment links
 
-NPCI
+# NPCI
 https://www.npci.org.in/
 
-INDIA STACK
+# INDIA STACK
 https://nfinite.in/product-detail/8cce7b57-b64e-458d-915f-b07e115bb1e3
 https://upigateway.com/
 
