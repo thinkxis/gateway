@@ -188,7 +188,7 @@ Even then thats not marketable in countries like India specially where you have 
 
 
 
-/* some usedful goverment links
+some usedful goverment links
 
 # NPCI
 https://www.npci.org.in/
@@ -197,5 +197,6 @@ https://www.npci.org.in/
 https://nfinite.in/product-detail/8cce7b57-b64e-458d-915f-b07e115bb1e3
 https://upigateway.com/
 
-All rights ristricted!
-Dipesh Bhoir */
+All rights privileged! Ask before using my work anywhere. It might be out of date in most cases.
+I do not share bleading-edge optimised versions due to NDA & legal challanges.
+# Dipesh Bhoir
