@@ -178,7 +178,8 @@ Finally, the simple step to build your own API Gateway is done. There are so man
 Even then thats not marketable in countries like India specially where you have UPI like infrastructure
 */
 
-https://nfinite.in/catalogue/how_it_works/2021/2/Upi_1613147183.png
+![alt text](https://nfinite.in/catalogue/how_it_works/2021/2/Upi_1613147183.png)
+
 
 
 /* some usedful goverment links
