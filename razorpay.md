@@ -1,4 +1,4 @@
-# razorpay gateway integration
+# Razorpay gateway integration
 integrating the Razorpay payment gateway with an Angular app and Node.js backend. 
 Here's a step-by-step guide:
 
