@@ -177,15 +177,81 @@ function __addSecureAndCacheHeaders(res) {
 }
 ```
 
-/*
+
 we are done here with building a basic payment gateway.
 We’re done… ( Not really :) )
 Finally, the simple step to build your own API Gateway is done. There are so many things you could scale up like the authentication, caching or anything that really fits your needs.
 Even then thats not marketable in countries like India specially where you have UPI like infrastructure
-*/
+
 
 ![alt text](https://nfinite.in/catalogue/how_it_works/2021/2/Upi_1613147183.png)
 
+
+I'm listing NPCI API's
+I dont think they are public
+you wont be able to access them without proper license
+
+
+# List of APIs
+
+```
+/ReqChkTxn/{version}/urn:txnid:{transaction}
+bank ReqChkTxn
+
+This API allows the PSPs to request for the status of the transaction. The PSPs must request for status only after the specified timeout period.
+/ReqHbt/{version}/urn:txnid:{transaction}
+bank ReqHbt
+
+This API is a mechanism for UPI system monitoring i.e. testing connection status with PSPs and sending responding to PSPs when initiated by it.)
+/ReqBalEnq/{version}/urn:txnid:{transaction}
+bank ReqBalEnq
+
+This API Allows PSP to enquirebalance of a user.
+/ReqListAccount/{version}/urn:txnid:{transaction}
+bank ReqListAccount
+
+API allows PSPs to find the list of accounts linked to the mobile by an account provider.
+/ReqListAccPvd/{version}/urn:txnid:{transaction}
+bank ReqListAccPvd
+
+/ReqListKeys/{version}/urn:txnid:{transaction}
+bank ReqListKeys
+
+/ReqListPsp/{version}/urn:txnid:{transaction}
+bank ReqListPsp
+
+/ReqListVae/{version}/urn:txnid:{transaction}
+bank ReqListVae
+
+/ReqManageVae/{version}/urn:txnid:{transaction}
+bank ReqManageVae
+
+/ReqOtp/{version}/urn:txnid:{transaction}
+bank ReqOtp
+
+/ReqPendingMsg/{version}/urn:txnid:{transaction}
+bank ReqPendingMsg
+
+/ReqRegMob/{version}/urn:txnid:{transaction}
+bank ReqRegMob
+
+/ReqSetCre/{version}/urn:txnid:{transaction}
+bank ReqSetCre
+
+/ReqTxnConfirmation/{version}/urn:txnid:{transaction}
+bank ReqTxnConfirmation
+
+/ReqValAdd/{version}/urn:txnid:{transaction}
+bank ReqValAdd
+
+/ReqMandate/{version}/urn:txnid:{transaction}
+bank ReqMandate
+
+/ReqPay/{version}/urn:txnid:{transaction}
+bank ReqPay Info
+```
+
+This platform is only for testing purpose. APIs listed on this portal can be tested only in a stimulated environment and not in real-time. To fully use the APIs, you will have to contact the provider.
 
 
 some usedful goverment links
