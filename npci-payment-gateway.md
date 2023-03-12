@@ -192,7 +192,7 @@ I dont think they are public
 you wont be able to access them without proper license
 
 
-# List of APIs
+# List of APIs only for licensed payment gateway providers
 
 ```
 /ReqChkTxn/{version}/urn:txnid:{transaction}
