@@ -1,4 +1,4 @@
-building payments gateway from scratch using npci stack 
+building payments gateway from scratch then integrating npci tech stack with it.
 # Author: Dipesh Bhoir
 In our case, we’re going to build a simple API Gateway for the entry of our microservice. So, the API Gateway will implement all of these functions below:
 - Basic Authentication
